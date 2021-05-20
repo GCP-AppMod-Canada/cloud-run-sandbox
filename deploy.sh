@@ -7,5 +7,5 @@ sleep 10
 for i in services/*; do
   service_name=`basename $i .yaml`
   echo $service_name
-  gcloud alpha run services replace $i  --platform gke --cluster ayratk-cluster --cluster-location us-central1-b --namespace cloud-run-sandbox
+  gcloud alpha run services replace $i  --platform gke --cluster bee-dev-gke --cluster-location us-central1 --namespace cloud-run-sandbox
 done
